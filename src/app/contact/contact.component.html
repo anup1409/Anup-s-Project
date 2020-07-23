@@ -1,0 +1,31 @@
+<html>
+    <body>
+       <div class="contact-form">
+           <h2>Contact Us</h2>
+           <p>Please send your message. We will get back to you earliest.</p>
+           <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" ngNativeValidate>
+               <div class="form-group">
+                   <label>Message : </label>
+                   <textarea class="form-control" formControlName='message' id="message" cols="30" rows="5" required></textarea>
+               </div>
+               <div class="form-group">
+                <label>Your Name : </label>
+                <input type="text" class="form-control" formControlName='name' id="name" required>
+               </div>
+               <div class="form-group emailDiv">
+                <label>Email : </label>
+                <input type="text" class="form-control" formControlName='email' id="email" required>
+               </div>
+               <button type="submit" class="btn btn-success">Send</button>
+           </form>
+            </div>
+            <div class="contact-detail">
+                <i class="fa fa-phone" style="color: #089fd1;"></i> <span style="color: #fff;"> +91 7755030654</span> <br>
+                <i class="fa fa-envelope" style="color: #089fd1;"></i><a href="mailto:anupit3013@gmail.com" style="color: #089fd1;"> <span style="color: #fff;"> info@medicinedonation.com</span></a><br>
+                <br>
+                <a href="https://www.facebook.com/anup1509" style="color: #089fd1;"><i class="fa fa-facebook-square fa-2x"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="https://www.instagram.com/deep_silence1409/" style="color: #089fd1;"><i class="fa fa-instagram fa-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://twitter.com/Anupsharma751" style="color: #089fd1;"><i class="fa fa-twitter-square fa-2x"></i></a>  
+            </div>
+    </body>
+</html>

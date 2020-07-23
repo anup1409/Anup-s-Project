@@ -1,0 +1,200 @@
+<html>
+  <body>
+    <div class="userName">
+      <h3>Hi {{ fname }} {{ mname }} {{ lname }}</h3>
+      <small>Date : <span id="date"></span></small><br />
+      <small>Time : <span id="time"></span></small>
+    </div>
+    <br />
+    <div class="container requestdiv">
+      <div class="row">
+        <div class="col-md-12 offset=md-1">
+          <div class="row">
+            <div class="col-md-4 request-left">
+              <img src="assets/Images/medicons.jpg" alt="" />
+              <h3>Welcome</h3>
+              <button class="btn btn-primary" id="donbtn" (click)="donate()">
+                Donate
+              </button>
+            </div>
+            <div class="col-md-8 request-right">
+              <!-- <i class="fa fa-arrow-left fa-2x" (click)="back()" id="left" style="visibility: hidden;"></i>
+                      <i class="fa fa-arrow-right fa-2x" (click)="forward()" id="right" style="visibility: hidden;"></i> -->
+              <h2>Request</h2>
+
+              <div class="availableMedicine col-md-8">
+                <form (ngSubmit)="availableMedicine()">
+                  <label id="am">Available Medicine :</label>&nbsp;
+                  <button type="submit" class="btn btn-success available">
+                    click here
+                  </button>
+                </form>
+              </div>
+              <br />
+              <br />
+              <div class="searchMedicine col-md-8">
+                <form
+                  [formGroup]="requestForm"
+                  class="form-inline"
+                  (ngSubmit)="search()"
+                  ngNativeValidate
+                >
+                  <div class="form-group">
+                    <input
+                      list="medicine"
+                      class="form-control"
+                      id="msearch"
+                      formControlName="medicineName"
+                      placeholder="Medicine Name *"
+                      required
+                    />
+                    <datalist id="medicine">
+                      <option *ngFor="let med of medName" value="{{ med }}">
+                      </option>
+                    </datalist>
+
+                    <button
+                      type="submit"
+                      id="sbtn"
+                      class="btn btn-success search"
+                    >
+                      <i class="fa fa-search search"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <br /><br />
+
+              <div class="tableMedicine">
+                <p id="pa" style="color: black;">
+                  Double Click on medicine's name to proceed.
+                </p>
+                <table class="fixed_header table table-striped" id="tb">
+                  <thead>
+                    <th>Medicine Name</th>
+                    <th>Power (in mg)</th>
+                    <th>Expiry Date</th>
+                    <th>Quantity</th>
+                  </thead>
+                  <tbody (click)="valu()">
+                    <tr
+                      *ngFor="let donates of donat"
+                      class="req"
+                      (click)="value()"
+                    >
+                      <td id="column">{{ donates.medicineName }}</td>
+                      <td>{{ donates.power }}</td>
+                      <td>{{ donates.expiryDate }}</td>
+                      <td>{{ donates.quantity }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div id="requestDiv" style="visibility: hidden;">
+                <form
+                  [formGroup]="requestForm"
+                  class="rf"
+                  (ngSubmit)="requestM()"
+                  ngNativeValidate
+                >
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control col-md-2"
+                      formControlName="medicineName"
+                      id="mname"
+                      (click)="OnInput($event)"
+                      readonly
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="number"
+                      class="form-control col-md-2"
+                      formControlName="power"
+                      required
+                      placeholder="Power * (in mg)"
+                      id="power"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="number"
+                      class="form-control col-md-2"
+                      formControlName="quantity"
+                      required
+                      placeholder="Quantity *"
+                      id="quantity"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-success sub">
+                    Submit
+                  </button>
+                </form>
+                <!-- <button>Back</button> -->
+              </div>
+
+              <div class="medicineDespription" style="visibility: hidden;">
+                <h4
+                  style="
+                    text-shadow: 0.5px 0.5px 0.5px black;
+                    font-weight: bold;
+                  "
+                >
+                  {{ medicineName }}
+                </h4>
+                <br />
+                <hr />
+                <div class="description">
+                  <p
+                    style="color: #db1825; text-shadow: 0.5px 0.5px 0.5px #fff;"
+                  >
+                    {{ description }}
+                  </p>
+                </div>
+                <div class="use">
+                  <h3
+                    style="
+                      text-shadow: 0.5px 0.5px 0.5px black;
+                      font-weight: bold;
+                    "
+                  >
+                    Uses
+                  </h3>
+                  <ul
+                    style="color: #db1825; text-shadow: 0.5px 0.5px 0.5px #fff;"
+                  >
+                    <li *ngFor="let u of us">{{ u }}</li>
+                  </ul>
+                </div>
+                <div class="sideEffect">
+                  <h3
+                    style="
+                      text-shadow: 0.5px 0.5px 0.5px black;
+                      font-weight: bold;
+                    "
+                  >
+                    Side effects
+                  </h3>
+                  <ul
+                    style="color: #db1825; text-shadow: 0.5px 0.5px 0.5px #fff;"
+                  >
+                    <li *ngFor="let u of se">{{ u }}</li>
+                  </ul>
+                </div>
+                <button
+                  class="btn btn-primary"
+                  id="request"
+                  (click)="request()"
+                >
+                  Request
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

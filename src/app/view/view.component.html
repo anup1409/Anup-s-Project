@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <div class="row head" >
+            <div class="col-md-1">First Name</div>
+            <div class="col-md-1">Middle Name</div>
+            <div class="col-md-1">Last Name</div>
+            <div class="col-md-1">Gender</div>
+            <div class="col-md-1">DOB</div>
+            <div class="col-md-1">Contact</div>
+            <div class="col-md-1">Address</div>
+            <div class="col-md-2">E-mail ID</div>
+            <div class="col-md-1">Password</div>
+            <div class="col-md-1">C Password</div>
+            </div>
+        
+        <div class="row head1" *ngFor="let reg of user">
+            <br/>
+            <div class="col-md-1">{{reg.fname}}</div>
+            <div class="col-md-1">{{reg.mname}}</div>
+            <div class="col-md-1">{{reg.lname}}</div>
+            <div class="col-md-1">{{reg.gender}}</div>
+            <div class="col-md-1">{{reg.dob}}</div>
+            <div class="col-md-1">{{reg.contact}}</div>
+            <div class="col-md-1">{{reg.al1}} {{reg.al2}} {{reg.city}} {{reg.state}} {{reg.pin}}</div>
+            <div class="col-md-2">{{reg.email}}</div>
+            <div class="col-md-1">{{reg.pass}}</div>
+            <div class="col-md-1">{{reg.cpass}}</div>
+            <div class="col-md-1"><button (click)="delete(reg)" class="btn btn-danger">Delete</button></div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+        
+    </body>
+</html>

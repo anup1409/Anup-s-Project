@@ -1,0 +1,76 @@
+img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  background: #fff;
+  margin-top: -5.5px;
+}
+a {
+  color: white;
+  font-weight: bolder;
+}
+
+ul {
+  float: right;
+}
+small {
+  font-size: 10px;
+}
+.navbar-brand {
+  margin-top: -10px;
+}
+.liHome {
+  background: #1b3680;
+  color: #fff;
+}
+.liLogout {
+  visibility: hidden;
+  margin-left: -114px;
+}
+.liProfile {
+  visibility: hidden;
+  margin-left: -114px;
+}
+#bar {
+  cursor: pointer;
+  color: #fff;
+}
+.option {
+  max-width: 80px;
+  height: 80px;
+  text-align: center;
+  background: #1b3680;
+  color: #fff;
+  float: right;
+}
+
+#span {
+  cursor: pointer;
+}
+#span:hover {
+  background: red;
+  color: #fff;
+  cursor: pointer;
+}
+#myModal {
+  width: 150px;
+  left: 1050px;
+}
+.modal-content {
+  width: 150px;
+}
+.liModal {
+  list-style: none;
+}
+#mod {
+  color: black;
+  text-decoration: none;
+}
+#smal {
+  color: black;
+  font-size: 15px;
+}
+button {
+  outline: none;
+}

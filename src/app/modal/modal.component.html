@@ -1,0 +1,60 @@
+<!-- <!-- <div class="modal fade" id="editImg" role="dialog">
+    
+    <div class="modal-dialog">
+        
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" id="span" class="close" data-dismiss="modal">&times;</button>
+              <h2>Edit Profile Picture</h2>
+            </div>
+            <div class="modal-body">
+                <img [src]="imageUrl" width="200" id="imagechange"/><br><br>
+              <input type="file" (change)="onFileSelected($event)" value="Edit" id="icon" style="visibility:hidden;" >
+              <ul id="modalUl">
+                <li style="padding-left:1em">
+                    <button  (click)="remove()" id="remove" data-dismiss="modal">Remove</button>
+                </li>
+                <li>
+                        <button id="change"> Edit</button>
+                </li>
+                <li><button id="upload" (click)="upload()" data-dismiss="modal" disabled>Upload</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+</div>
+<i id="cam" class="fa fa-camera fa-2x" data-toggle="modal" data-target="#editImg"></i> -->
+
+<html>
+  <body>
+    <div class="book">
+      <small id="b">BOOK</small><br>
+      <small id="t">YOUR TICKET</small><br>
+      <i class="fa fa-train fa-2x"></i><br><br>
+      <h6>{{from}}</h6>
+      <form  [formGroup]="homeForm" (ngSubmit)="onSubmit()" ngNativeValidate>
+        <div class="textbox">
+          <input type="text" formControlName="from" placeholder="From*" id="from" required>
+        </div>
+        <div id="arrow">
+          <i class="fa fa-long-arrow-up" ></i>
+          <i class="fa fa-long-arrow-down" ></i>
+        </div>
+        <div class="textbox">
+          <input type="text" formControlName="to" placeholder="To*" id="to" required>
+        </div><br>
+        <div class="textbox">
+          <input type="date" formControlName="date"  id="date" required>
+        </div><br>
+        <select formControlName="classes" id="select">
+          <option value="">All Classes</option>
+          <option>AC 1 Tier (1A)</option>
+          <option>AC 2 Tier (2A)</option>
+          <option>AC 3 Tier (3A)</option>
+          <option>Sleeper (SL)</option>
+          <option>Second Sitting (2S)</option>
+        </select><br>
+      </form>
+    </div>
+  </body>
+</html> -->

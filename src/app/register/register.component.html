@@ -1,0 +1,97 @@
+<html>
+    <head>
+    </head>
+    <body>
+       <div class="container">
+            <div class="row">
+              <div class="col-md-12 offset=md-1">
+                <div class="row">
+                  <div class="col-md-3 register-left">
+                    <img src="assets/Images/l.svg" alt="">
+                    <h3>Welcome</h3>
+                    <button (click)="login()" class="btn btn-primary">Login</button>
+                  </div>
+                  <div class="col-md-9 register-right">
+                     <h2>Register Here</h2>
+                     <div class="register-form col-md-9">
+                      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" ngNativeValidate>
+                        <div class="form-group">
+                          <input type="text" class="form-control col-md-3"  formControlName='fname' required placeholder="First Name *" id="fname"/>
+                         </div>
+                         <div class="form-group">
+                          <input type="text" class="form-control col-md-3" formControlName='mname' id="mname"  placeholder="Middle Name"/>
+                         </div>
+                         <div class="form-group">
+                         <input type="text" class="form-control col-md-3" formControlName='lname' id="lname"  placeholder="Last Name"/>
+                         </div>
+                          <div class="form-group dob col-md-3">
+                            <label >DOB * :</label>
+                            <input type="date" class="form-control col-md-3" formControlName="dob" id="dob" required />
+                        </div>
+                         <div class="gender col-md-4">
+                         <label > Male</label>&nbsp;&nbsp;
+                         <input type="radio" id="male" value="Male" formControlName="gender"/>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <label >Female</label> &nbsp;&nbsp;
+                          <input type="radio" id="female" value="Female" formControlName="gender"/>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <input type="tel" class="form-control col-md-3" id="contact" formControlName="contact" required pattern="[1-9]{1}[0-9]{9}" minlength="10" maxlength="10" placeholder="Contact Number *" />
+                           </div>
+                           
+                           <div class="form-group col-md-6">
+                            <input type="text" class="form-control col-md-3" id="al1" formControlName="al1" required placeholder="Street/Flat no *" />
+                            </div>
+                            
+                            <div class="form-group col-md-6">
+                              <input type="text" class="form-control col-md-3" id="al2" formControlName="al2"  placeholder="Locality"  />
+                            </div>
+                            
+                            <div class="form-group col-md-6">
+                              <select class="form-control col-md-3" id="city" formControlName="city">
+                                <option value="" style="color: #ada4a3 ;">Select you city *</option>
+                                <option *ngFor="let city of cities" >{{city}}</option>
+                            </select>
+                            </div>
+                            
+                            <div class="form-group col-md-6">
+                              <select class="form-control col-md-3" id="state" formControlName="state" >
+                                <option value=""  style="color: #ada4a3;">Select your state *</option>
+                                <option *ngFor="let state of states" >{{state}}</option>
+                            </select>
+                            </div>
+                            
+                          <div class="form-group col-md-6">  
+                          <input type="text" class="form-control col-md-3" id="pin" formControlName="pin" required pattern = "[0-9]+" minlength="6" maxlength="6" placeholder="Pin Code *" id="pin"/>
+                      </div>
+                      
+                      <div class="form-group col-md-6">
+                        <input type="email" id="email" formControlName="email" class="form-control col-md-3"  required placeholder="E-mail ID *" />
+                      </div>
+                      
+                      <div class="form-group col-md-6">
+                        <input type="password" class="form-control col-md-3" formControlName='pass' id="pass" 
+                        autocomplete="off"  required placeholder="Password *">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <input type="password" class="form-control col-md-3" formControlName='cpass' id="cpass" 
+                        autocomplete="off" required placeholder="Confirm password *"> 
+                      </div>
+                      <div class="form-group col-md-6">
+                        <button type="submit" class="btn col-md-6">
+                        Register
+                       </button>
+                       </div>
+                        
+                        </form>
+                       
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+    </body>
+</html>

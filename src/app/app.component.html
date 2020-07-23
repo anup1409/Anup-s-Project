@@ -1,0 +1,78 @@
+<html>
+ <body>
+    
+      <nav class="navbar navbar-light" style="background-color: #25c1f5;">
+           <div class="navbar-brand">
+             <img src="assets/Images/medicons.jpg" alt="" (click)="home()" style="cursor: pointer;">
+           </div>
+            <a class="navbar-brand" (click)="home()" style="cursor: pointer;">
+              
+              Medicine Donation
+              <br>
+                <small>Please Donate Medicine If no Need</small>
+                </a>
+                
+          <ul class="nav navbar-nav">
+            <li class="liHome"><a routerLink="" [routerLinkActive]="'is-active'"><i class="fa fa-home"></i> Home</a></li>
+            <li class="liSignup"><a routerLink="register"><i class="fa fa-lock"></i> Sign up Free</a></li>
+            <li class="liLogin"><a routerLink="login"><i class="fa fa-unlock"></i> Login</a></li>
+            <li class="liContact"><a routerLink="contact"><i class="fa fa-phone"></i> Contact</a></li>
+            <li class="liAbout"><a routerLink="about"><i class="fa fa-address-card"></i> About US</a></li>
+            <li class="liProfile"><a routerLink="profile"><i class="fa fa-user"></i> User Profile</a></li>
+            <li class="liLogout"><a routerLink="logout" (click)="logout()"><i class="fa fa-sign-out"></i> Logout</a></li>
+             <i class="fa fa-bars"  id="bar" data-toggle="modal" data-target="#myModal" style="visibility: hidden;" ></i>
+          </ul>
+          
+      </nav>
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" id="span" class="close" data-dismiss="modal">&times;</button>
+              <small id="smal">Service</small>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+              <li class="liModal"><a routerLink="donate" id="mod" data-dismiss="modal" >Donate</a></li><br>
+              <li class="liModal"><a routerLink="request" id="mod" data-dismiss="modal" >Request</a></li>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+      
+     
+    <router-outlet></router-outlet>
+
+    <!-- <div class="footer">
+      <div class="footer-content">
+        <div class="footer-section about">
+          <p id="md">Medicine Donation</p>
+          <p>Medicine Donation is a plateform where we can donate medicine if there is no any use  as well as we can request medicine if needed.</p>
+        </div>
+        <div class="footer-section links">
+          <p id="md">Quick Links</p>
+          <ul>
+            <li><a routerLink="home" style="color: #fff;">Home</a></li>
+            <li><a routerLink="register" style="color: #fff;">Sign up</a></li>
+            <li><a routerLink="login" style="color: #fff;">Login</a></li>
+            <li><a routerLink="contact" style="color: #fff;">Contact</a></li>
+            <li><a routerLink="about" style="color: #fff;">About US</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact">
+          <p id="md">Contact Us</p>
+          <i class="fa fa-phone"></i> +91 7755030654 <br>
+          <i class="fa fa-envelope"></i><a href="mailto:anupit3013@gmail.com" style="color: #fff;"> info@medicinedonation.com</a><br>
+          <br>
+          <a href="https://www.facebook.com/anup1509" style="color: #fff;"><i class="fa fa-facebook-square fa-2x"></i></a>&nbsp;&nbsp;&nbsp;
+          <a href="https://www.instagram.com/deep_silence1409/" style="color: #fff;"><i class="fa fa-instagram fa-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="https://twitter.com/Anupsharma751" style="color: #fff;"><i class="fa fa-twitter-square fa-2x"></i></a>
+      </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; medicinedonation.com | Designed by Anup Kumar Sharma
+      </div>
+    </div> -->
+  </body>
+</html>

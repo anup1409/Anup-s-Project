@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <body class="col-md-12">
+    <div class="container" >
+        <div class="profile-header">
+        <div class="profile-img" id="myBtn">
+        <img [src]="imageUrl" width="200"/>
+         <i class="fa fa-camera fa-2x" data-toggle="modal" data-target="#editImg" ></i>
+         </div>
+        
+            <div class="profile-nav-info" >
+                <h3 class="user-name">
+                    {{fname}} {{mname}} {{lname}}
+                </h3>
+                <div class="address">
+                <p class="city">
+                    {{al1}} {{al2}},
+                    {{city}}
+                    <br/>
+                    <span class="state">{{state}} {{pin}}</span>
+                    </p>
+                </div>
+            </div>
+            <div class="profile-option">
+            <div class="notification">
+                <i class="fa fa-bell"></i>
+                <span class="alert-message">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-bd">
+        <div class="left-side">
+            <div class="profile-side">
+            
+            <p class="mobile-no" >
+                <i class="fa fa-phone"></i>
+            {{contact}}
+                </p>
+                <p class="user-email">
+                <i class="fa fa-envelope"></i>{{emaill}}
+                </p>
+                <div class="profile-btn">
+                <button class="chatbtn">
+                    <i class="fa fa-comment"></i>chat
+                    </button>
+                    <button routerLink="create" class="createbtn" >
+                    <i class="fa fa-plus"></i>services
+                    </button>
+                </div>
+               
+            </div>
+            </div>
+            <div class="right-side">
+            <div class="nav">
+                <ul>
+                <li  class="user-donate active">Donated</li>
+                <li  class="user-request">Requested</li>
+                </ul>
+                </div>
+                <div class="profile-body">
+                <div class="profile-donate tab" >
+                    <table id="fixed_header" >
+                    <thead>
+                        <th>Medicine Name</th>
+                        <th>Power (in mg)</th>
+                        <th>Expiry Date</th>
+                        <th>Quantity</th>
+                    </thead>
+                       <tbody>
+                        <tr *ngFor="let donates of donate">
+                            <td>{{donates.medicineName}}</td>
+                            <td id="pow">{{donates.power}}</td>
+                                <td>{{donates.expiryDate}}</td>
+                                 <td>{{donates.quantity}}</td>
+                            </tr>
+                       </tbody>
+                    </table>
+                    </div>
+                    <div class="profile-request tab" >
+                     <table id="fixed_headers" >
+                    <thead>
+                        <th>Medicine Name</th>
+                        <th>Power (in mg)</th>
+                        <th>Quantity</th>
+                    </thead>
+                        <tbody>
+                            <tr *ngFor="let req of request">
+                                <td>{{req.medicineName}}</td>
+                                <td>{{req.power}}</td>
+                                  <td>{{req.quantity}}</td>  
+                                </tr>
+                               
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                 
+        <div id="message-container" style="visibility: hidden;">
+            <div class="topnav">
+                
+                <label ><i class="fa fa-circle" style="color: green;"></i> {{fname}}</label>
+                <div id="iconbtn">
+                    <button id="minimise">
+                         <i class="fa fa-window-minimize" aria-hidden="true"></i>
+                    </button>
+                    <button id="max">
+                        <i class="fa fa-window-maximize" ></i>
+                   </button>
+                    <button id="close">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div></div>
+                <br>
+                <div id="message-area"></div>
+                    <form id="send-container">
+                    <input type="text" id="message-input" autofocus style="width: 151px; border: solid 1px;">
+                    <button type="submit" id="send-button">Send</button>
+                    </form>
+                </div>
+        </div>
+
+        <div class="modal fade" id="editImg" role="dialog">
+            <div class="modal-dialog">
+            
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" id="span" class="close" data-dismiss="modal">&times;</button>
+                  <h2>Edit Profile Picture</h2>
+                </div>
+                <div class="modal-body">
+                    <img [src]="imageUrl" width="200" id="imagechange"/><br><br>
+                  <input type="file" (change)="onFileSelected($event)" value="Edit" id="icon" style="visibility:hidden;" >
+                  <ul id="modalUl">
+                      <li style="padding-left:1em">
+                        <button  (click)="remove()" id="remove" data-dismiss="modal">Remove</button>
+                    </li>
+                        <li>
+                            <button id="change"> Edit</button>
+                        </li>
+                        <li><button id="upload" (click)="upload()" data-dismiss="modal" disabled>Upload</button></li>
+                      
+                  </ul>
+                </div>
+                
+              </div>
+              
+            </div>
+          </div>
+        
+    </body>
+</html>

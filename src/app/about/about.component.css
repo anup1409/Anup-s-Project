@@ -1,0 +1,30 @@
+body{
+    
+    background-image: url("/assets/Images/back3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 30px !important;
+    margin-top: -23px;
+    height: 92vh;
+}
+img{
+    margin-left: 750px;
+    padding-top:30px ;
+}
+h2{
+    margin-left: 670px;
+}
+.details{
+    margin-left: 720px;
+}
+.address{
+    margin-left: 950px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+#head{
+    color: #FF851B;
+    font-weight: bold;
+    font-size: 17px;
+}

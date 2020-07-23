@@ -1,0 +1,16 @@
+body{
+    background-image: url("/assets/Images/logout.jpg");
+    background-position: center, top right, center center;
+    background-repeat: repeat-y, no-repeat, repeat-x;
+    background-attachment: fixed, scroll, fixed;
+    background-size: cover;
+    margin-top: -23px;
+    height: 93vh;
+    
+}
+h1
+{
+    padding-top: 50px;
+    margin-left: 450px;
+    color: #fff;
+}

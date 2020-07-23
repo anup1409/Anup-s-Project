@@ -1,0 +1,70 @@
+body{
+   
+    background-image: url("/assets/Images/back1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 30px !important;
+    margin-top: -23px;
+    height: 100vh;
+    text-shadow: 1px 1px 1px black;
+}
+#description
+{
+   
+    margin-left: 30px;
+    margin-top: 10px;
+}
+#para
+{
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 35px;
+}
+#para1
+{
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 35px;
+    margin-left: 300px;
+    margin-top:-15px;
+}
+#pv,#pc
+{
+    /* text-transform: capitalize; */
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+}
+#pc1
+{
+    /* text-transform: capitalize; */
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+    margin-left: 80px;
+    margin-top:-10px;
+}
+#vision
+{
+    max-width: 300px;
+    margin-left:10px;
+    margin-top: 200px;
+}
+#charity
+{
+    max-width: 300px;
+    margin-left: 900px;
+    margin-top: -120px;
+}
+#hc{
+    font-weight: bold;
+    color: #25c1f5;
+    margin-left: 90px;
+}
+#hv{
+    font-weight: bold;
+    color: #25c1f5;
+    margin-left: 40px;
+}

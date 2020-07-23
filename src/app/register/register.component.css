@@ -1,0 +1,178 @@
+body{
+    background-image: url("/assets/Images/back3.jpg");
+    background-size: cover;
+    padding-top: 30px !important;
+    margin-top: -23px;
+    background-position: center, top right, center center;
+    background-repeat: repeat-y, no-repeat, repeat-x;
+    background-attachment: fixed, scroll, fixed;
+}
+.register-left{
+    text-align: center;
+    color: #fff;
+    padding: 30px;
+}
+.register-left .btn-primary{
+    border-radius: 1.5rem;
+    width: 80px;
+    border: none;
+    font-weight: 600;
+    background:indigo;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px;
+    outline: none;
+}
+.register-left .btn-primary:hover{
+    background: rgb(21, 114, 2);
+    color: #fff;
+}
+.register-right{
+    border: none;
+    /* background: #f8f8f8; */
+    background-image: linear-gradient(to right, #f55deb, #7884f0);
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.register-right h2{
+    text-align: center;
+    margin-bottom: 10px;
+    color: #555;
+
+}
+.register-form{
+    padding: 20px;
+}
+#fname{
+    width: 250px;
+}
+#mname{
+    width: 250px;
+    margin-top: -35px;
+    margin-left: 260px;
+}
+#lname{
+    width: 250px;
+    margin-top: -35px;
+    margin-left: 520px;
+}
+ #dob{
+    width: 190px;
+    margin-top: -30px;
+    margin-left: 60px;
+}
+.dob{
+    margin-left: -15px;
+    margin-top: 10px;
+}
+
+.gender{
+    margin-top: -50px;
+    margin-left: 260px;
+    height: 34px;
+    width: 250px;
+    background: #fff;
+    border: .5px solid #ccc6c6;
+    border-radius: 5px;
+    padding-top: 5px ;
+    padding-left: 45px;
+}
+.gender #male{
+    margin-top: -20px;
+}
+#contact{
+    width: 250px;
+    margin-top: -50px;
+    margin-left: 505px;
+}
+#al1{
+    width: 250px;
+    margin-left: -300px;
+    margin-top: -5px;
+}
+
+#al2{
+    width: 250px;
+    margin-top: -48px;
+    margin-left: 245px;
+}
+
+#city{
+    width: 250px;
+    margin-top: -48px;
+    margin-left: 220px;
+    /* color: #ada4a3; */
+}
+
+#state{
+    width: 250px;
+    margin-left: -15px;
+    margin-top: -25px;
+    
+}
+#pin{
+    width: 250px;
+    margin-top: -25px;
+    margin-left: -40px;
+}
+
+#email{
+    width: 250px;
+    margin-top: -50px;
+    margin-left: 506px;
+}
+
+#pass{
+    width: 370px;
+    margin-left: -300px;
+    margin-top: -5px;
+}
+#cpass{
+    width: 370px;
+    margin-top: -48px;
+    margin-left: 385px;
+} 
+.register-right .btn{
+    float: right;
+    width: 300px;
+    border-radius: 1.5rem;
+    border: none;
+    font-weight: 600;
+    background: #ff9800;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px;
+}
+.register-right .btn:hover{
+    background: rgb(21, 114, 2);
+    color: #fff;
+}
+.register-left img{
+    margin-top: 80px;
+    margin-bottom: 5px;
+    width: 100px;
+    animation: mover 1s infinite alternate;
+}
+.register-left h3{
+    color: rgb(42, 3, 182);
+    font-weight: bolder;
+}
+.alert
+{
+    text-align: center;
+    float: left;
+  
+}
+@keyframes mover{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+       transform: translateY(-50px);
+    }
+}
+
+

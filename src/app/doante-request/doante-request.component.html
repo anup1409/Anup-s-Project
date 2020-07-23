@@ -1,0 +1,70 @@
+<html>
+    <head>
+  
+    </head>
+    <body>
+
+        <div class="userName">
+            
+            <h3>Hi {{fname}} {{mname}} {{lname}}</h3>
+            <small>Date : <span id="date"></span></small><br>
+            <small>Time : <span id="time"></span></small>
+        </div>
+          <br>
+                   <div class="container donatediv">
+                <div class="row">
+                  <div class="col-md-12 offset=md-1">
+                    <div class="row">
+                      <div class="col-md-4 donate-left">
+                        <img src="assets/Images/medicons.jpg" alt="">
+                        <h3>Welcome</h3>
+                        <button  class="btn btn-primary" id="reqbtn" (click)="request()">Request</button>
+                     
+                      </div>
+                      <div class="col-md-8 donate-right">
+                         <h2>Donate</h2>
+                         <small><i class="fa fa-star"></i> Please fill details carefully</small>
+                         <div class="donate-form col-md-8">
+                          <form [formGroup]="donateForm" class="df" (ngSubmit)="donate()" ngNativeValidate>
+                            <div class="form-group">
+                              <input type="text" class="form-control col-md-4"  formControlName='medicineName' required placeholder="Medicine Name *" id="mname"/>
+                             </div>
+                             <div class="form-group">
+                                <input list="powers" class="form-control col-md-4"  formControlName='power' required placeholder="Power * (in mg)" id="power">
+                                <datalist id="powers">
+                                  <option value="250">
+                                  <option value="500">
+                                  <option value="750">
+                                    <option value="1000">
+                                </datalist>
+                               </div>
+                               <div class="form-group">
+                                <input type="number" class="form-control col-md-4"  formControlName='quantity' required placeholder="Quantity *" id="quantity"/>
+                               </div>
+                               <div class="form-group">
+                                <input type="text" class="form-control col-md-4"  formControlName='composition' required placeholder="Composition *" id="composition"/>
+                               </div>
+                               <div class="form-group col-md-4">
+                                <label id="led" >Expiry Date * :</label>
+                                <input type="date" class="form-control col-md-4"  formControlName='expiryDate' required placeholder="Expiry Date *" id="expiryDate"/>
+                               </div>
+                               <div class="form-group">
+                                <input type="text" class="form-control col-md-4"  formControlName='uses' placeholder="Uses" id="uses"/>
+                               </div>
+                               <div class="form-group">
+                                <button type="submit" class="btn">
+                                Donate
+                               </button>
+                               </div>
+                                                             
+                             </form>
+                         </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              
+    </body>
+    </html>

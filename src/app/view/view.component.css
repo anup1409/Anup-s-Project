@@ -1,0 +1,25 @@
+body{
+    
+    background-image: url("/assets/Images/back3.jpg");
+    background-size: cover;
+    padding-top: 30px !important;
+    margin-top: -23px;
+    background-position: center, top right, center center;
+    background-repeat: repeat-y, no-repeat, repeat-x;
+    background-attachment: fixed, scroll, fixed;
+}
+.head1
+{
+    color: #fff;
+    text-decoration: solid;
+    text-align: center;
+    font-weight: bold;
+}
+.head
+{
+    color:red;
+    font-weight: bolder;
+    font-style: normal;
+    
+    text-align: center;
+}

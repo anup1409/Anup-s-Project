@@ -1,0 +1,67 @@
+body {
+  background-image: url("/assets/Images/back1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -23px;
+  padding: 0;
+  font-family: sans-serif;
+  height: 94vh;
+  padding-top: 90px;
+}
+::placeholder {
+  color: #363333;
+}
+.login-box {
+  width: 280px;
+  margin-left: 70%;
+}
+.login-box h1 {
+  float: left;
+  font-size: 40px;
+  border-bottom: 6px solid #4caf50;
+  margin-bottom: 50px;
+  padding: 13px 0;
+}
+.textbox {
+  width: 100%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 8px 0;
+  margin: 8px 0;
+  border-bottom: 1px solid #4caf50;
+}
+.textbox i {
+  width: 26px;
+  float: left;
+  text-align: center;
+  color: red;
+}
+.textbox input {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  width: 80%;
+  float: left;
+  margin: 0 10px;
+}
+.btn {
+  width: 100%;
+  background: none;
+  background-color: #4caf50;
+  padding: 5px;
+  font-size: 18px;
+  margin: 10px 0;
+  color: white;
+  outline: none;
+}
+span {
+  font-weight: bold;
+  color: black;
+  font-size: 15px;
+}
+#sign {
+  font-weight: bold;
+  color: black;
+  font-size: 15px;
+}

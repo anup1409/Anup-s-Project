@@ -1,0 +1,51 @@
+body{
+    
+    background-image: url("/assets/Images/back3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 30px !important;
+    margin-top: -23px;
+    height: 92vh;
+}
+.contact-form{
+    background: #525754;
+    width: 37%;
+    color: #fff;
+    padding-left: 20px;
+    float: right;
+    margin-right: 30px;
+    border-radius: 25px;
+    box-shadow: 1px 1px 0px #999,
+                2px 2px 0px #999,
+                3px 3px 0px #999,
+                4px 4px 0px #999,
+                5px 5px 0px #999,
+                6px 6px 0px #999;
+}
+.contact-detail{
+    
+    margin-top: 390px;
+    margin-left: 760px;
+}
+#message{
+    width: 95%;
+    
+}
+#name{
+    width: 47%;
+    
+}
+.emailDiv #email{
+    width: 100%;
+    
+}
+.emailDiv{
+    /* margin-left: 215px; */
+    float: right;
+    margin-top: -74px;
+    margin-right: 20px;
+}
+button{
+    margin-bottom: 20px;
+    
+}
